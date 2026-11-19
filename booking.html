@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Book a table or order delivery from Aunt Tina Restaurant." />
+  <title>Booking & Orders — Aunt Tina Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="nav__brand" href="index.html"><span class="nav__brand-dot"></span>Aunt Tina</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a class="nav__link" href="index.html">Home</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="menu.html">Menu</a></li>
+        <li><a class="nav__link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav__link is-active" href="booking.html">Booking</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" style="padding-block:var(--s-7) var(--s-5);">
+      <div class="hero__inner reveal">
+        <p class="eyebrow">Booking & Delivery</p>
+        <h1>Reserve a table or <em>order in</em>.</h1>
+        <p class="hero__lead">Enjoy a wonderful dining experience — or have your favourite meal delivered to your door.</p>
+      </div>
+    </section>
+
+    <section class="section container" style="padding-top:0;">
+      <div class="booking-grid">
+        <!-- Table booking -->
+        <div class="form-card reveal">
+          <h2>Table Booking</h2>
+          <p>Submit your details to open WhatsApp. Review the message and tap Send to send your booking request to the restaurant.</p>
+          <form data-whatsapp-form="Table Booking">
+            <div class="form-group"><label for="b-name">Full Name</label><input id="b-name" name="name" type="text" placeholder="Enter your full name" required /></div>
+            <div class="form-group"><label for="b-phone">Phone Number</label><input id="b-phone" name="phone" type="tel" placeholder="Enter your phone number" required /></div>
+            <div class="form-row">
+              <div class="form-group"><label for="b-guests">Guests</label><input id="b-guests" name="guests" type="number" min="1" max="20" placeholder="2" required /></div>
+              <div class="form-group"><label for="b-date">Date</label><input id="b-date" name="date" type="date" required /></div>
+            </div>
+            <div class="form-group"><label for="b-time">Time</label><input id="b-time" name="time" type="time" required /></div>
+            <div class="form-group"><label for="b-req">Special Request</label><textarea id="b-req" name="request" placeholder="Any special requests?"></textarea></div>
+            <button class="btn btn--primary btn--full" type="submit">Send Booking via WhatsApp</button>
+          </form>
+        </div>
+
+        <!-- Delivery -->
+        <div class="form-card reveal reveal-delay-1">
+          <h2>Delivery Details</h2>
+          <p>Submit your order details to open WhatsApp. Review the message and tap Send to send your order to the restaurant.</p>
+          <form data-whatsapp-form="Delivery Order">
+            <div class="form-group"><label for="d-name">Full Name</label><input id="d-name" name="name" type="text" placeholder="Enter your full name" required /></div>
+            <div class="form-group"><label for="d-phone">Phone Number</label><input id="d-phone" name="phone" type="tel" placeholder="Enter your phone number" required /></div>
+            <div class="form-group"><label for="d-address">Delivery Address</label><textarea id="d-address" name="address" placeholder="Enter your delivery address" required></textarea></div>
+            <div class="form-group"><label for="d-food">Food / Order</label><textarea id="d-food" name="food" placeholder="What would you like to order?" required></textarea></div>
+            <div class="form-group"><label for="d-time">Preferred Delivery Time</label><input id="d-time" name="time" type="time" required /></div>
+            <div class="form-group"><label for="d-notes">Delivery Instructions</label><textarea id="d-notes" name="notes" placeholder="Any instructions for the delivery"></textarea></div>
+            <button class="btn btn--primary btn--full" type="submit">Send Order via WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section><h2>Aunt Tina Restaurant</h2><p>Freshly prepared meals and a welcoming atmosphere.</p></section>
+        <section><h3>Explore</h3><a href="about.html">About Us</a><a href="menu.html">Menu</a><a href="gallery.html">Gallery</a></section>
+        <section><h3>Get in touch</h3><a href="contact.html">Contact Us</a><a href="booking.html" class="footer-cta">Book a Table</a></section>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span data-year>2026</span> Aunt Tina Restaurant. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
